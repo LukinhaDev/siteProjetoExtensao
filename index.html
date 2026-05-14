@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Rapadura do Rivaldo | Artesanal Mineira</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --marrom:#5c3317;
+    --marrom2:#8b4513;
+    --creme:#f8f5ef;
+    --verde:#25d366;
+    --verde2:#1eb85a;
+    --texto:#2a2a2a;
+    --cinza:#777;
+    --branco:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--creme);
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* HEADER */
+
+header{
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("fotoRapadura02.png");
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+
+    position:relative;
+    overflow:hidden;
+
+    min-height:100vh;
+
+    color:white;
+    display:flex;
+    align-items:center;
+}
+
+header::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:140px;
+    background:linear-gradient(to top,var(--creme),transparent);
+}
+
+.topo{
+    position:absolute;
+    top:0;
+    width:100%;
+    padding:25px 0;
+    z-index:10;
+
+    backdrop-filter:blur(5px);
+    background:rgba(0,0,0,.15);
+    border-bottom:0px solid rgba(255,255,255,.08);
+}
+
+.topo-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#ffcf87;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:30px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffcf87;
+}
+
+.hero{
+    width:100%;
+}
+
+.hero-content{
+    max-width:650px;
+    position:relative;
+    z-index:2;
+}
+
+
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+    color:#f1f1f1;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    padding:18px 28px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn-whats{
+    background:linear-gradient(135deg,#25d366,#1eb85a);
+    color:white;
+    box-shadow:0 12px 25px rgba(37,211,102,.35);
+}
+
+.btn-whats:hover{
+    transform:translateY(-3px);
+}
+
+.btn-whats:active{
+    transform:scale(.97);
+}
+
+.btn-outline{
+    background:white;
+    color:var(--marrom);
+}
+
+.btn-outline:hover{
+    transform:translateY(-3px);
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:40px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.stats h3{
+    font-size:32px;
+    color:#ffcf87;
+}
+
+.stats p{
+    margin-top:5px;
+    color:#eee;
+    font-size:14px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 0;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo h2{
+    font-size:42px;
+    color:var(--marrom);
+    margin-bottom:10px;
+}
+
+.titulo p{
+    color:var(--cinza);
+}
+
+.titulo h2::after{
+    content:'';
+    display:block;
+    width:100px;
+    height:5px;
+    background:linear-gradient(90deg,#c98a43,#5c3317);
+    margin:10px auto 0;
+    border-radius:50px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    border:1px solid rgba(0,0,0,.05);
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:var(--marrom);
+}
+
+.card-content p{
+    color:var(--cinza);
+    line-height:1.7;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais{
+    background:white;
+}
+
+.diferenciais-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.box{
+    background:var(--creme);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-6px);
+}
+
+.box h3{
+    margin:15px 0;
+    color:var(--marrom);
+}
+
+.box p{
+    color:var(--cinza);
+    line-height:1.7;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.galeria img:hover{
+    transform:scale(1.04);
+    filter:brightness(1.05);
+}
+
+/* HISTORIA */
+
+.historia{
+    background:white;
+}
+
+.historia-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.historia-content p{
+    line-height:2;
+    color:var(--cinza);
+    font-size:18px;
+}
+
+/* CTA */
+
+.cta-final{
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("fotoRapadura.jpg");
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    color:white;
+    text-align:center;
+}
+
+.cta-final h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.cta-final p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#2b160c;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.footer-sub{
+    margin-top:10px;
+    color:#c9b8aa;
+    font-size:14px;
+}
+
+/* WHATS FLOAT */
+
+.whats-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:var(--verde);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+.whats-float:hover{
+    transform:scale(1.1);
+}
+
+/* ANIMAÇÃO */
+
+.fade-up{
+    animation:fadeUp .9s ease both;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .titulo h2{
+        font-size:34px;
+    }
+
+    .cta-final h2{
+        font-size:36px;
+    }
+
+    .stats{
+        gap:20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPO -->
+
+<div class="topo">
+
+<div class="container topo-content">
+
+<div class="logo">
+<span>Rapadura do Rivaldo</span>
+</div>
+
+<nav>
+<a href="#producao">Produção</a>
+<a href="#diferenciais">Diferenciais</a>
+<a href="#historia">História</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<header>
+
+<div class="container hero">
+
+<div class="hero-content">
+
+<br>
+
+<h1>
+Rapadura artesanal com sabor de roça de verdade
+</h1>
+
+<p>
+Feita de forma tradicional, preservando o sabor raiz da verdadeira rapadura mineira produzida artesanalmente no interior.
+</p>
+
+<div class="buttons">
+
+<button class="btn btn-whats" onclick="whatsapp()">
+💬 Falar no WhatsApp
+</button>
+
+<a href="#producao" class="btn btn-outline">
+Ver Produção
+</a>
+
+</div>
+
+<div class="stats">
+
+<div>
+<h3>4ª Geração</h3>
+<p>De Tradição Familiar</p>
+</div>
+
+<div>
+<h3>100%</h3>
+<p>Artesanal</p>
+</div>
+
+<div>
+<h3>MG</h3>
+<p>Produção mineira</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</header>
+
+<!-- PRODUÇÃO -->
+
+<section id="producao" class="fade-up">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Nossa Produção</h2>
+<p>Tradição, qualidade e sabor artesanal</p>
+</div>
+
+<div class="grid">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img src="producaoArtesanal.png" alt="Produção artesanal">
+
+<div class="card-content">
+
+<h3>Produção Artesanal</h3>
+
+<p>
+Cada rapadura é preparada artesanalmente, preservando o sabor tradicional e a qualidade da verdadeira produção mineira.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img src="feitoNoTacho.png" alt="Rapadura mineira">
+
+<div class="card-content">
+
+<h3>Feita no Tacho</h3>
+
+<p>
+Produção feita da forma tradicional, utilizando técnicas passadas de geração em geração no interior de Minas Gerais.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="producaoRapadura.jpeg" alt="Rapadura artesanal">
+
+<div class="card-content">
+
+<h3>Sabor da Roça</h3>
+
+<p>
+Um sabor marcante e autêntico que carrega a essência da roça e da tradição artesanal brasileira.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DIFERENCIAIS -->
+
+<section class="diferenciais fade-up" id="diferenciais">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Por que escolher a nossa?</h2>
+<p>Qualidade artesanal em cada detalhe</p>
+</div>
+
+<div class="diferenciais-grid">
+
+<div class="box">
+<h3>🌿 100% Natural</h3>
+<p>
+Sem conservantes e feita apenas com ingredientes selecionados.
+</p>
+</div>
+
+<div class="box">
+<h3>🔥 Produção Tradicional</h3>
+<p>
+Produzida artesanalmente no tacho, preservando o sabor original da roça.
+</p>
+</div>
+
+<div class="box">
+<h3>❤️ Feita com Cuidado</h3>
+<p>
+Cada produção recebe atenção especial para garantir qualidade e autenticidade.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section class="fade-up">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Da Cana ao Sabor</h2>
+<p>Diretamente do interior de Minas Gerais</p>
+</div>
+
+<div class="galeria">
+
+<img src="e5ab0118-a5b5-4d6e-8764-b28303f3130e.JPG" alt="">
+<img src="8c7773f2-ab4b-4f34-842d-62fff348789c.JPG" alt="">
+<img src="b146c093-e39d-46e3-b179-d495e046b81e.JPG" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HISTORIA -->
+
+<section class="historia fade-up" id="historia">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Nossa História</h2>
+<p>Tradição passada de geração em geração</p>
+</div>
+
+<div class="historia-content">
+
+<p>
+    A produção de rapadura não é apenas um negócio para nós; é uma herança preciosa que corre em nosso sangue. Essa história atravessa quatro gerações: começou com o meu bisavô, passou pelo meu avô e chegou ao meu pai — que, com muito orgulho, mantém até hoje o seu engenho movido a tração animal, preservando a essência mais pura de antigamente.
+    <br><br>
+    Em 2012, decidi ouvir o coração e dar continuidade a esse legado de uma forma nova. Deixei um emprego fixo para apostar no sonho de produzir uma rapadura autêntica, pura e livre de químicas. O que começou com um engenho pequeno e muita coragem, hoje se transformou em uma estrutura moderna com engenho elétrico.
+    <br><br>
+    Embora a tecnologia tenha mudado para ganharmos qualidade e escala, o compromisso permanece o mesmo de 14 anos atrás: oferecer um produto natural, feito com o carinho da agricultura familiar, honrando o passado que aprendi no engenho do meu pai e construindo um futuro doce para as próximas gerações.
+    <br>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="cta-final fade-up" id="contato">
+
+<div class="container">
+
+<h2>
+Fale conosco pelo WhatsApp
+</h2>
+
+<p>
+Entre em contato diretamente com a Rapadura do Rivaldo e conheça mais sobre nossa produção artesanal.
+</p>
+
+    <button class="btn btn-whats" onclick="whatsapp()">
+💬 Entrar em Contato
+</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Rapadura do Rivaldo • Todos os direitos reservados</p>
+
+<p class="footer-sub">
+Produção artesanal mineira feita com tradição e carinho 🌾
+</p>
+
+</footer>
+
+<!-- FLOAT -->
+
+<div class="whats-float" onclick="whatsapp()">
+💬
+</div>
+
+<script>
+
+const numero = "5537998648499";
+
+function whatsapp(){
+
+    const mensagem =
+`Olá! Vim pelo site da Rapadura do Rivaldo e quero saber mais sobre as rapaduras artesanais.`;
+
+    const url =
+`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
